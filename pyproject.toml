@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minecraft-lang-sorter"
+version = "0.1.0"
+description = "Smart sorter for Minecraft lang (JSON) files."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+# インストール後、ターミナルで 'lang-sort' と打ち込むことで実行できるようになります
+lang-sort = "main:main"
+
+[tool.setuptools]
+# パッケージ化する対象のPythonファイルを指定します
+py-modules = ["main", "sorter"]
